@@ -34,7 +34,7 @@ class BaseChecker
     protected $softIssues = array();
 
     /**
-     * Client for requests to api.wpessentials.io
+     * Client for requests to wp-checksum.seravo.com
      * @var object
      */
     private $apiClient;

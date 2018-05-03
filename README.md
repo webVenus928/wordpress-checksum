@@ -10,7 +10,7 @@ Wp-cli sub command for verifying checksum data for themes and plugins. It checks
 wp-checksum checks for added, removed or modified files and prints out info about files that does not match the original file as it exists in the .org repositories.
 
 ## Backend api
-wp-checksum uses a backend API (https://api.wpessentials.io) to retreive the checksums for known plugins and themes from our database. It's also possible to run wp-checksum in local mode, In this case wp-checksum, downloads zip-files directly from the Wordpress.org repository and avoid using the API. There are several advantages of using the API over local mode:
+wp-checksum uses a backend API (https://wp-checksum.seravo.com) to retreive the checksums for known plugins and themes from our database. It's also possible to run wp-checksum in local mode, In this case wp-checksum, downloads zip-files directly from the Wordpress.org repository and avoid using the API. There are several advantages of using the API over local mode:
    - Performance
    - Reliability
    - WordPress.org does't keep zip-files available for all versions of all plugins, roughly 15% av all plugins are affected. The remote API can deliver checksum data for these plugins but that's not possible when running wp-checksum locally.

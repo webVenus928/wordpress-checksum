@@ -257,7 +257,7 @@ class ApiClient
      * Read an API key from the WordPress DB or the wp-cli.yml file.
      *
      * If no API key is found, attempt to create a anonymous account
-     * at wpessentials.io and store credentials in the WP db
+     * at wp-checksum.seravo.com and store credentials in the WP db
      *
      * @return bool|string
      */

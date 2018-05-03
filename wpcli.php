@@ -2,7 +2,7 @@
 require_once __DIR__ . '/ParametersProvider.php';
 
 if(!defined('WP_CHECKSUM_VERSION')) {
-    define('WP_CHECKSUM_VERSION', '0.3.0');
+    define('WP_CHECKSUM_VERSION', '0.3.1');
 }
 
 if (defined('WP_CLI') && class_exists('WP_CLI', false)) {

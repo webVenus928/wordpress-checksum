@@ -35,8 +35,8 @@ class TestsProvider implements ServiceProviderInterface
 
         $pimple['apiBaseUrl'] = $this->getSetting(
         	'apiBaseUrl',
-            'string',
-	        'https://api.wpessentials.io/v1'
+          'string',
+	        'http://wp-checksum.seravo.com/v1'
         );
 
     }
