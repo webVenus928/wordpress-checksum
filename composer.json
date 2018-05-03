@@ -1,7 +1,7 @@
 {
-    "name": "eriktorsner/wp-checksum",
+    "name": "seravo/wp-checksum",
     "description": "Check plugin and theme consistency",
-    "homepage": "https://github.com/eriktorsner/wp-checksum/",
+    "homepage": "https://github.com/seravo/wp-checksum/",
     "type": "wp-cli-package",
     "keywords": [
         "wordpress"
@@ -12,10 +12,15 @@
             "name": "Erik Torsner",
             "email": "erik@torgesta.com",
             "role": "lead"
+        },
+        {
+            "name": "Otto Kekäläinen",
+            "email": "otto@seravo.com",
+            "role": "contributor"
         }
     ],
     "support": {
-        "issues": "https://github.com/eriktorsner/wp-checksum/issues"
+        "issues": "https://github.com/seravo/wp-checksum/issues"
     },
     "require": {
         "php": ">=5.3.9",

@@ -1,8 +1,8 @@
 # wp-checksum
 
-[![Build Status](https://travis-ci.org/eriktorsner/wp-checksum.svg?branch=master)](https://travis-ci.org/eriktorsner/wp-checksum)
-[![codecov](https://codecov.io/gh/eriktorsner/wp-checksum/branch/master/graph/badge.svg)](https://codecov.io/gh/eriktorsner/wp-checksum)
-[![license](https://img.shields.io/github/license/eriktorsner/wp-checksum.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/seravo/wp-checksum.svg?branch=master)](https://travis-ci.org/seravo/wp-checksum)
+[![codecov](https://codecov.io/gh/seravo/wp-checksum/branch/master/graph/badge.svg)](https://codecov.io/gh/seravo/wp-checksum)
+[![license](https://img.shields.io/github/license/seravo/wp-checksum.svg)](https://opensource.org/licenses/MIT)
 
 
 Wp-cli sub command for verifying checksum data for themes and plugins. It checks the md5 sum of all files inside each plugin and theme and compares against what the same plugin/theme looks like on the WordPress repo. The core wp-cli command has this functionality for core, this sub command brings the same for plugins and themes.
@@ -31,14 +31,14 @@ Read more about how the api and hourly rate limits work in the section "Backend 
 ### Globally, as a wp-cli package
 
 ```bash
-wp package install eriktorsner/wp-checksum
+wp package install seravo/wp-checksum
 ```
 
 ### Via composer
 wp-checksum can also be installed manually or via compser.
 
 ```bash
-$ composer require eriktorsner/wp-checksum
+$ composer require seravo/wp-checksum
 ```
 
 To activate wp-checksum when installed locally via composer, you need to edit (or create) your wp-cli.yml file to make sure it includes the vendor/autoload.php file.
@@ -93,8 +93,8 @@ Diff a file in your local WordPress install with it's original
   - **type** core, theme or plugin
   - **slug** The slug to identify the plugin or theme. Skip this arg for core files
   - **path** Path of the file to check, relative to the root of core or the theme or plugin
-  
-The diff command determines the local version of the object to compare and then retreives the corresponding original file. If both files are found, the two files are compared using the command diff. Output is colored so that new or changed lines in the local version are red. 
+
+The diff command determines the local version of the object to compare and then retreives the corresponding original file. If both files are found, the two files are compared using the command diff. Output is colored so that new or changed lines in the local version are red.
 
 ### wp checksum quota
 
@@ -126,11 +126,11 @@ Connect your email address to the default (or specified via --apikey) key to rai
 $ wp checksum all
 ```
 ```bash
-# Check themes and plugins, use locally stored zipfiles in /tmp 
+# Check themes and plugins, use locally stored zipfiles in /tmp
 $ wp checksum all --local
 ```
 ```bash
-# Check themes and plugins, use locally stored zipfiles in /var/zipcache 
+# Check themes and plugins, use locally stored zipfiles in /var/zipcache
 $ wp checksum all --local --localcache=/var/zipcache
 ```
 ```bash
@@ -251,7 +251,7 @@ Naturally, getting detailed output makes a whole lot more sense when using yaml,
 
 ## Parameters in wp-cli.yml
 
-Default values for parameters **apikey**, **details**, **local**, **localcache** and **format** can be entered into the wp-cli.yml file. Add a section named checksum: 
+Default values for parameters **apikey**, **details**, **local**, **localcache** and **format** can be entered into the wp-cli.yml file. Add a section named checksum:
 
 ```yaml
 
@@ -261,7 +261,7 @@ checksum:
   apikey: ABC123
   local: yes
   localcache: /var/zipcache
-``` 
+```
 
 ## Specifying the api key
 
@@ -275,7 +275,7 @@ If no api key is found in any of the above locations, wp-checksum will attempt t
 
 ## Backend api and hourly rate limits
 
-The backed api and database are work in progress and requires a fair amount of work. In order to minimize various kinds of abuse, the api has an hourly rate limit. The first time you use wp-checksum, an anonymous api key is generated and stored in the WordPress options table. The anonymous key grants up 30 requests api per hour (subject to change). If you register and validate your email address, your hourly limit is raised to 100 requests per hour (subject to change). If you need to go beyond 100 requests per hour, you are welcome to subscribe to the service and paying a (small) montly fee. If you do that, also know that you are supporting a project that I think can do a lot of good for the WordPress community. Thanks in advance. 
+The backed api and database are work in progress and requires a fair amount of work. In order to minimize various kinds of abuse, the api has an hourly rate limit. The first time you use wp-checksum, an anonymous api key is generated and stored in the WordPress options table. The anonymous key grants up 30 requests api per hour (subject to change). If you register and validate your email address, your hourly limit is raised to 100 requests per hour (subject to change). If you need to go beyond 100 requests per hour, you are welcome to subscribe to the service and paying a (small) montly fee. If you do that, also know that you are supporting a project that I think can do a lot of good for the WordPress community. Thanks in advance.
 
 Please go to https://www.wpessentials.io/product-category/api-access/ to subscribe to a paid api key.
 
